@@ -7,21 +7,22 @@
 
 ## Way of Working
 
-<!-- Affirmed during practices-discovery. Example: -->
-<!-- We use GitHub Flow with feature branches. Branches live 3-5 days max. -->
-<!-- Hotfixes branch from main and merge back via expedited review. -->
+
+- **Integration branch**: main
+- Use short-lived branches and squash-merge each completed change into `main`.
 
 ## Walking Skeleton
 
-<!-- Affirmed during practices-discovery. Example: -->
-<!-- We don't run a walking skeleton — our deployment pipeline is mature -->
-<!-- and the slice cost outweighs the value at our maturity stage. -->
+
+- Build a thin end-to-end slice first, verify it, and obtain checkpoint approval before starting later units.
 
 ## Testing Posture
 
-<!-- Affirmed during practices-discovery. Example: -->
-<!-- We use BDD. Specifications drive scenarios; scenarios drive code. -->
-<!-- Each Unit ships with feature files in /features/. -->
+
+- **Methodology**: atdd
+- **Ordering**: Agree on acceptance tests before implementation, then build to pass them.
+- **Methodology evidence**: ATDD was selected because acceptance tests are agreed before implementation and guide development toward passing them.
+- Require at least 80% line coverage, enforced in CI before merge, and keep the existing test suite green.
 
 ## Guard Policy
 
@@ -29,14 +30,14 @@
 
 ## Deployment
 
-<!-- Affirmed during practices-discovery. -->
+
+- Deploy merged changes to staging automatically.
+- Require manual approval from the tech lead before production deployment.
 
 ## Code Style
 
-<!-- Team-specific conventions beyond the linter. Example: -->
-<!-- - Prefer named exports over default exports -->
-<!-- - All async functions return Result<T, E>, never throw -->
 
+- Follow the repository's formatter and linter configuration; if none exists, use language defaults and idiomatic naming.
 ## Forbidden
 
 <!-- Team-specific forbidden patterns -->
